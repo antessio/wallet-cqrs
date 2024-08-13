@@ -1,11 +1,21 @@
 import Config
 
+import Config
+
+config :wallet, Wallet.EventStore,
+  serializer: Commanded.Serialization.JsonSerializer,
+  username: "wallet",
+  password: "wallet_pwd",
+  database: "walletdb_dev",
+  hostname: "localhost",
+  pool_size: 10
+
 # Configure your database
 config :wallet, Wallet.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "wallet",
+  password: "wallet_pwd",
+  database: "walletdb_dev",
   hostname: "localhost",
-  database: "wallet_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

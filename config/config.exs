@@ -7,6 +7,9 @@
 # General application configuration
 import Config
 
+config :wallet, event_stores: [Wallet.EventStore]
+
+
 config :wallet,
   ecto_repos: [Wallet.Repo],
   generators: [timestamp_type: :utc_datetime]
