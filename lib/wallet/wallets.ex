@@ -53,6 +53,12 @@ defmodule Wallet.Wallets do
     %WalletEntity{}
     |> WalletEntity.changeset(attrs)
     |> Repo.insert()
+
+    # event = attrs
+    # |> CreateWalletCommand.new()
+    # |> CreateWalletCommand.assign_id()
+
+    # CommandedApplication.dispatch(event)
   end
 
   @doc """

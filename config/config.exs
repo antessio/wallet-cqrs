@@ -8,6 +8,7 @@
 import Config
 
 config :wallet, event_stores: [Wallet.EventStore]
+config :commanded_ecto_projections, repo: Wallet.Repo
 
 
 config :wallet,
