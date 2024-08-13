@@ -5,4 +5,10 @@ defmodule Wallet.CommandedApplication do
       adapter: Commanded.EventStore.Adapters.EventStore,
       event_store: Wallet.EventStore
     ]
+
+    router Wallet.CommandedRouter
+
+    def init(config) do
+      {:ok, config}
+    end
 end
