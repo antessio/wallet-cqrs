@@ -7,6 +7,7 @@ config :wallet, Wallet.EventStore,
   username: "wallet",
   password: "wallet_pwd",
   database: "walletdb_dev",
+  schema: "eventstore",
   hostname: "localhost",
   pool_size: 10
 
