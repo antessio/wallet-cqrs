@@ -1,3 +1,8 @@
 defmodule Wallet.CommandedApplication do
-  use Commanded.Application, otp_app: :wallet
+  use Commanded.Application,
+    otp_app: :wallet,
+    event_store: [
+      adapter: Commanded.EventStore.Adapters.EventStore,
+      event_store: Wallet.EventStore
+    ]
 end
